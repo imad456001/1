@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchIQ Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+  <div class="login-box">
+    <h1>MatchIQ</h1>
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <button id="loginBtn">LOG IN</button>
+
+    <p class="info-link" id="infoLink">
+      يرجى تسجيل الدخول للمتابعة
+    </p>
+  </div>
+</div>
+
+<div class="popup" id="popup">
+  <span>سيتم فتح التسجيل قريبًا</span>
+</div>
+
+<script>
+const popup = document.getElementById("popup");
+document.getElementById("loginBtn").onclick = () => {
+  popup.classList.add("show");
+  setTimeout(() => popup.classList.remove("show"), 3000);
+};
+document.getElementById("infoLink").onclick = () => {
+  window.location.href = "info.html";
+};
+</script>
+
+</body>
+</html>
