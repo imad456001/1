@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وان 1 | One 1 - الرئيسية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --main-p: #6c5ce7; --dark: #000000; --white: #ffffff; --gray: #f4f4f9; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--gray); padding-bottom: 80px; }
+        
+        /* Header */
+        header { background: var(--dark); color: white; padding: 15px 5%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 900; color: var(--main-p); }
+        .search-box { flex: 1; margin: 0 20px; position: relative; }
+        .search-box input { width: 100%; padding: 12px 45px 12px 15px; border-radius: 30px; border: none; outline: none; background: #222; color: white; }
+        .search-box i { position: absolute; right: 15px; top: 13px; color: var(--main-p); }
+
+        /* Categories */
+        .cats-bar { display: flex; overflow-x: auto; background: var(--white); padding: 15px; gap: 25px; white-space: nowrap; border-bottom: 1px solid #ddd; }
+        .cat-item { text-align: center; cursor: pointer; min-width: 70px; }
+        .cat-item i { font-size: 22px; background: #f0f0f0; padding: 15px; border-radius: 20px; color: var(--main-p); transition: 0.3s; }
+        .cat-item:hover i { background: var(--main-p); color: white; transform: translateY(-3px); }
+        .cat-item p { font-size: 13px; margin-top: 8px; font-weight: 600; color: var(--dark); }
+
+        /* Ads Grid */
+        .ads-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 15px; padding: 20px 5%; }
+        .ad-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative; transition: 0.3s; }
+        .ad-card:hover { transform: scale(1.02); }
+        .ad-card img { width: 100%; height: 150px; object-fit: cover; }
+        .ad-info { padding: 12px; }
+        .ad-info h3 { font-size: 14px; margin: 0; color: #333; height: 38px; overflow: hidden; }
+        .ad-price { color: var(--main-p); font-weight: bold; font-size: 16px; margin-top: 8px; }
+        .ad-loc { font-size: 11px; color: #888; margin-top: 5px; }
+
+        /* Bottom Navigation */
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 12px 0; border-top: 1px solid #eee; box-shadow: 0 -2px 15px rgba(0,0,0,0.1); }
+        .nav-link { color: #aaa; text-decoration: none; font-size: 22px; transition: 0.3s; }
+        .nav-link.active { color: var(--main-p); }
+        .center-add { background: var(--main-p); color: white !important; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: -35px; border: 5px solid var(--gray); font-size: 24px; box-shadow: 0 4px 10px rgba(108, 92, 231, 0.4); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ONE 1</div>
+    <div class="search-box">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="ما الذي تبحث عنه؟">
+    </div>
+    <div class="user-profile"><i class="fa-regular fa-user-circle" style="font-size: 26px;"></i></div>
+</header>
+
+<div class="cats-bar">
+    <div class="cat-item"><i class="fa fa-car"></i><p>سيارات</p></div>
+    <div class="cat-item"><i class="fa fa-laptop"></i><p>إلكترونيات</p></div>
+    <div class="cat-item"><i class="fa fa-tshirt"></i><p>ملابس</p></div>
+    <div class="cat-item"><i class="fa fa-home"></i><p>عقارات</p></div>
+    <div class="cat-item"><i class="fa fa-handshake"></i><p>خدمات</p></div>
+</div>
+
+<div class="ads-container">
+    <div class="ad-card">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=400" alt="product">
+        <div class="ad-info">
+            <h3>ماك بوك اير M2 بحالة ممتازة</h3>
+            <div class="ad-price">4,200 ريال</div>
+            <div class="ad-loc"><i class="fa fa-location-dot"></i> الرياض، السعودية</div>
+        </div>
+    </div>
+    </div>
+
+<nav class="bottom-nav">
+    <a href="index.html" class="nav-link active"><i class="fa fa-home"></i></a>
+    <a href="chat.html" class="nav-link"><i class="fa fa-comment-dots"></i></a>
+    <a href="add-post.html" class="nav-link center-add"><i class="fa fa-plus"></i></a>
+    <a href="#" class="nav-link"><i class="fa-regular fa-heart"></i></a>
+    <a href="#" class="nav-link"><i class="fa fa-bars"></i></a>
+</nav>
+
+</body>
+</html>
